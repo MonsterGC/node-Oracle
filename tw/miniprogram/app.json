@@ -1,0 +1,19 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/modify/index",
+    "pages/send/index",
+    "pages/login/index",
+    "pages/detail/index",
+    "pages/register/index"
+  ],
+  "window": {
+    "backgroundColor": "#2d8cf0",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#2d8cf0",
+    "navigationBarTitleText": "电影迷",
+    "navigationBarTextStyle": "white"
+  },
+  "sitemapLocation": "sitemap.json",
+  "style": "v2"
+}

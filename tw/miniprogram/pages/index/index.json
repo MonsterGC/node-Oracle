@@ -1,0 +1,14 @@
+{
+  "usingComponents": {
+    "i-tab-bar": "../../dist/tab-bar/index",
+    "i-tab-bar-item": "../../dist/tab-bar-item/index",
+    "i-tabs": "../../dist/tabs/index",
+    "i-tab": "../../dist/tab/index",
+    "i-load-more": "../../dist/load-more/index",
+    "i-button": "../../dist/button/index",
+    "i-tag": "../../dist/tag/index",
+    "i-message": "../../dist/message/index"
+  },
+  "disableScroll": true,
+  "navigationBarTitleText": "电影迷"
+}

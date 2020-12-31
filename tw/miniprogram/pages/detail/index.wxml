@@ -1,0 +1,37 @@
+<view class="list-item">
+  <view class="row">
+    <view>
+      <image src="{{content.V_IMG}}"></image>
+    </view>
+    <view class="list-2">
+      <view><span>电影名:</span> {{content.V_TITLE}}</view>
+      <view><span>导演:</span> {{content.V_DIRECTOR}}</view>
+      <view><span>上映时间:</span> {{content.V_TIME}}</view>
+      <view><span>主演:</span> {{content.V_STARRING}}</view>
+    </view>
+  </view>
+  <view class="detail">
+    <span>剧情简介:</span>
+    <view>
+      {{content.V_DETAIL}}
+    </view>
+  </view>
+</view>
+
+<!-- 发布评论 -->
+<view class="flex" bindtap="handleOpen">
+  <image src="../../images/send.png"></image>
+</view>
+
+<!-- 点评 -->
+<view class="list" style="margin-top:20rpx;">
+  <block wx:for="{{msg}}">
+    <view style="margin-top:20rpx;">
+      <i-card title="{{item.U_EMAIL}}" extra="{{item.M_TIME}}">
+        <view slot="footer">{{item.M_CONTENT}}</view>
+      </i-card>
+    </view>
+  </block>
+  <i-load-more tip="没点评了" loading="{{ false }}" />
+</view>
+<i-message id="message" />

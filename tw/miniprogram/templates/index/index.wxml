@@ -1,0 +1,83 @@
+<template name="homepage">
+  <view>
+    <view class="home-header">
+      <swiper indicator-dots="{{homepage.indicatorDots}}" autoplay="{{homepage.autoplay}}"
+        interval="{{homepage.interval}}" duration="{{homepage.duration}}">
+        <block wx:for="{{homepage.slider}}" wx:key="*this">
+          <swiper-item>
+            <image src="{{item}}"></image>
+          </swiper-item>
+        </block>
+      </swiper>
+    </view>
+    <view class="home-select">
+      <i-tabs current="{{ homepage.current_scroll }}" scroll bindchange="handleChangeScroll">
+        <block wx:for="{{homepage.select}}">
+          <i-tab key="{{item}}" title="{{item}}"></i-tab>
+        </block>
+      </i-tabs>
+    </view>
+    <view class="home-list">
+      <view class="list" style="height:{{homepage.height}}px;">
+        <block wx:for="{{homepage.content}}">
+          <view class="list-item" bindtap="navDetail" data-Data="{{item}}">
+            <view>
+              <image src="{{item.V_IMG}}"></image>
+            </view>
+            <view class="list-2">
+              <view><span>电影名:</span> {{item.V_TITLE}}</view>
+              <view><span>导演:</span> {{item.V_DIRECTOR}}</view>
+              <view><span>上映时间:</span> {{item.V_TIME}}</view>
+              <view><span>主演:</span> {{item.V_STARRING}}</view>
+            </view>
+          </view>
+        </block>
+        <i-load-more tip="这是我底线" loading="{{ false }}" />
+      </view>
+    </view>
+  </view>
+</template>
+<template name="remind">
+  <view class="remind" style="height:{{remind.height}}px;">
+    <view class="remind-tips"><span>点击卡片可删除</span></view>
+    <block wx:for="{{remind.content}}">
+      <view class="list-item" bindtap="del" data-Data="{{item}}" data-Index="{{index}}">
+        <view>
+          <image src="{{item.V_IMG}}"></image>
+        </view>
+        <view class="list-2">
+          <view><span>电影名:</span> {{item.V_TITLE}}</view>
+          <view><span>导演:</span> {{item.V_DIRECTOR}}</view>
+          <view><span>点评:</span></view>
+          <view style="text-indent: 1em;font-size:23rpx;">{{item.M_CONTENT}}</view>
+        </view>
+      </view>
+    </block>
+    <i-load-more tip="这是我底线" loading="{{ false }}" />
+    <i-message id="message" />
+  </view>
+</template>
+<template name="mine">
+  <view class="mine">
+    <view class="contain">
+      <span>当前用户</span>
+      <view class="user">
+        <open-data type="userAvatarUrl"></open-data>
+      </view>
+      <view style="margin-top:20rpx;" bindtap="navModify">
+        <i-tag class="i-tags" name="注销" type="border" color="green">
+          修改密码
+        </i-tag>
+      </view>
+      <span>{{mine.userEmail}}</span>
+      <view class="btn" bindtap="close">
+        <view style="margin-top:20rpx;" bindtap="close">
+          <i-tag class="i-tags" name="注销" type="border" color="red">
+            注销
+          </i-tag>
+        </view>
+      </view>
+    </view>
+    <i-message id="message" />
+  </view>
+</template>

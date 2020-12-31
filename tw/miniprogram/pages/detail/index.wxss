@@ -1,0 +1,73 @@
+.flex {
+  position: fixed;
+  bottom: 100rpx;
+  right: 40rpx;
+  border-radius: 50%;
+  background: #fff;
+  /* padding: 10rpx; */
+  z-index: 9999;
+}
+
+.flex image {
+  width: 80rpx;
+  height: 80rpx;
+}
+
+.list-item {
+  width: 680rpx;
+  margin: 20rpx auto;
+  /* height: 300rpx; */
+  background: #1c2438;
+  border-radius: 10rpx;
+  box-shadow: 5px 5px 3px #ddd;
+
+  color: #fff;
+}
+
+.list-item .row {
+  flex-direction: row;
+  display: flex;
+}
+
+.list-item image {
+  width: 200rpx;
+  height: 260rpx;
+  margin: 20rpx;
+  box-shadow: 1px 1px 1px 1px #fff;
+}
+
+.list-item .list-2 {
+  width: 640rpx;
+  height: 260rpx;
+  margin: 20rpx;
+  font-size: 25rpx;
+  line-height: 50rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.list-2 span {
+  font-size: 26rpx;
+  font-weight: 600;
+  margin-right: 10rpx;
+}
+
+.list-2 view:last-child {
+  height: 110rpx;
+  white-space: normal;
+}
+
+.list-item .detail view {
+  font-size: 28rpx;
+  font-family: 'Times New Roman', Times, serif;
+  text-indent: 2em;
+  margin: 20rpx 20rpx 40rpx 20rpx;
+  padding-bottom: 30rpx;
+}
+
+.list-item .detail span {
+  font-size: 30rpx;
+  padding: 20rpx;
+}

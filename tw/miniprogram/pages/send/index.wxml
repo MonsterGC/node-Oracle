@@ -1,0 +1,5 @@
+<i-panel title="基础用法">
+  <i-input value="{{value}}" type="text" bind:change="nameValueChange" title="点评" autofocus placeholder="输入点评内容" />
+</i-panel>
+<i-button bind:click="handleClick" type="primary">点评</i-button>
+<i-message id="message" />

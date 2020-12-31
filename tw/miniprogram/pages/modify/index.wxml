@@ -1,0 +1,7 @@
+<i-panel title="基础用法">
+  <i-input value="{{resourcePass}}" type="password" bind:change="bindChange" title="原密码" autofocus placeholder="原密码" />
+  <i-input value="{{passw}}" type="password" bind:change="bindChange1" title="修改密码"  placeholder="修改密码" />
+  <i-input value="{{passw2}}" type="password" bind:change="bindChange2" title="确认密码"  placeholder="确认密码" />
+</i-panel>
+<i-button bind:click="handleClick" type="primary">修改密码</i-button>
+<i-message id="message" />
